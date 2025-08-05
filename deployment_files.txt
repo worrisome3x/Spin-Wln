@@ -1,0 +1,74 @@
+FILES TO UPLOAD TO YOUR GITHUB REPOSITORY:
+
+Essential Bot Files:
+- main.py (main bot file)
+- bot.py (bot configuration)
+- config.py (configuration settings)
+- database.py (database connection)
+- models.py (database models)
+
+Handler Folders:
+- handlers/user_handlers.py
+- handlers/admin_handlers.py
+- handlers/emoji_game_handlers.py
+- handlers/game_handlers.py
+
+Service Folders:
+- services/game_service.py
+- services/balance_service.py
+- services/blackjack_service.py
+- services/mines_service.py
+- services/multiplier_service.py
+
+Utility Folders:
+- utils/decorators.py
+
+Create these files in your GitHub repo:
+
+1. requirements.txt (copy content below):
+aiogram==3.21.0
+asyncpg==0.30.0
+sqlalchemy==2.0.42
+psutil==7.0.0
+python-dotenv==1.1.1
+
+2. .env.example (copy content below):
+BOT_TOKEN=your_bot_token_here
+DATABASE_URL=your_postgresql_database_url_here
+
+3. README.md (copy content below):
+# Telegram Casino Bot
+
+A comprehensive Telegram casino bot with emoji games.
+
+## Features
+- Emoji games: dice, basketball, bowling, darts, soccer, slots, blackjack, mines
+- Admin panel with balance management
+- User tipping system
+- PostgreSQL database integration
+
+## Deployment
+1. Set environment variables: BOT_TOKEN, DATABASE_URL
+2. Run: pip install -r requirements.txt
+3. Run: python main.py
+
+## Admin Commands
+- /addbalance - Add balance to users (Owner & Developer only)
+- /admin - Admin panel access
+
+## Game Commands
+- /dice, /basketball, /bowling, /darts, /soccer, /slots, /blackjack, /mines
+- /tip - Send money to other users
+- /balance - Check balance
+- /help - Show help
+
+RENDER DEPLOYMENT SETTINGS:
+- Repository: Your GitHub repo URL
+- Branch: main
+- Build Command: pip install -r requirements.txt
+- Start Command: python main.py
+- Service Type: Web Service (keeps bot running 24/7)
+
+ENVIRONMENT VARIABLES TO SET IN RENDER:
+- BOT_TOKEN: 7950981287:AAEgKisQ_haATTLoZQsnk6O_7YZNzIWdnO0
+- DATABASE_URL: Your PostgreSQL database connection string
